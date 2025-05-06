@@ -1,0 +1,47 @@
+{
+  "name": "@nextshopkit/sdk",
+  "version": "0.4.18",
+  "description": "NextShopKit PRO SDK for Next.js + Shopify",
+  "license": "MIT",
+  "author": "Mustafa ONAL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NextShopKit/sdk"
+  },
+  "homepage": "https://docs.nextshopkit.com/",
+  "main": "dist/index.sdk.js",
+  "module": "dist/index.sdk.mjs",
+  "types": "dist/index.sdk.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.sdk.mjs",
+      "require": "./dist/index.sdk.js",
+      "types": "./dist/index.sdk.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client/client.sdk.mjs",
+      "require": "./dist/client/client.sdk.js",
+      "types": "./dist/client/client.sdk.d.ts"
+    }
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "keywords": [
+    "shopify",
+    "nextjs",
+    "next.js",
+    "sdk",
+    "headless",
+    "ecommerce",
+    "typescript",
+    "react",
+    "storefront",
+    "commerce",
+    "api",
+    "frontend",
+    "cart",
+    "checkout",
+    "product"
+  ]
+}
