@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "outDir": "dist",
+    "baseUrl": "src",
+    "paths": {
+      "@actions/*": ["actions/*"],
+      "@actions": ["actions/index"],
+      "@clients/*": ["clients/*"],
+      "@components/*": ["components/*"],
+      "@components": ["components/index"],
+      "@graphql/*": ["graphql/*"],
+      "@gql": ["graphql/index"],
+      "@hooks/*": ["hooks/*"],
+      "@hooks": ["hooks/index"],
+      "@t/*": ["types/*"],
+      "@t": ["types/index"],
+      "@utils/*": ["utils/*"],
+      "@utils": ["utils/index"]
+    }
+  },
+  "include": ["src"]
+}

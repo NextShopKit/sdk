@@ -7,6 +7,31 @@
 
 A modern, typed, and opinionated SDK for building **Shopify headless storefronts** with **Next.js**. Skip the boilerplate. Stop wrestling with GraphQL. Start shipping faster.
 
+## Source and development
+
+This repository contains the TypeScript source previously maintained in
+`NextShopKit/pro-development`, including the SDK and Pro source entry points.
+Contributions and future source changes belong here.
+
+```bash
+git clone https://github.com/NextShopKit/sdk.git
+cd sdk
+npm ci
+npm run type:check
+npm run build
+```
+
+The default build preserves the `@nextshopkit/sdk` and `@nextshopkit/sdk/client`
+entry points. `npm run build:pro` builds the Pro entry points locally; run
+`npm run build` again to restore the SDK output. This migration does not change
+the SDK's public API or publish a new version of either package.
+
+Source lives in `src/`; generated output lives in `dist/`. npm packages include
+both source and compiled output. Installing from Git runs `prepare` to build
+the SDK. To publish, bump the package version and lockfile, merge the change,
+and manually run the **Publish SDK** workflow with that version. The workflow
+requires the repository's `NPM_TOKEN` secret.
+
 ## 🚀 Why NextShopKit?
 
 Building a Shopify headless store from scratch is **hard**. You'll run into:
