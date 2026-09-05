@@ -1,53 +1,47 @@
 # 🛍️ NextShopKit SDK
 
-[![npm version](https://badge.fury.io/js/@nextshopkit%2Fsdk.svg)](https://badge.fury.io/js/@nextshopkit%2Fsdk)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-14+-black.svg)](https://nextjs.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**Unmaintained — shared as a starting point for your own projects.**
 
-A modern, typed, and opinionated SDK for building **Shopify headless storefronts** with **Next.js**. Skip the boilerplate. Stop wrestling with GraphQL. Start shipping faster.
+NextShopKit is a TypeScript SDK for building Shopify storefronts with Next.js.
+The source is available in the hope that it is useful to someone. You are welcome
+to fork it, modify it, reuse parts of it, and continue development for your own
+projects under the [MIT license](LICENSE).
 
-## Source and development
+There is no active maintenance or support, and no updates, security fixes, new
+npm releases, or pull request reviews are promised. The code and examples are
+provided as-is. If you build on it, you are responsible for maintaining your
+fork, updating dependencies, and checking compatibility with the Shopify API
+and your version of Next.js.
 
-This repository contains the TypeScript source previously maintained in
-`NextShopKit/pro-development`, including the SDK and Pro source entry points.
-Contributions and future source changes belong here.
+## Fork and build
+
+Fork this repository on GitHub, then clone your fork (replace `YOUR-USERNAME`):
 
 ```bash
-git clone https://github.com/NextShopKit/sdk.git
+git clone https://github.com/YOUR-USERNAME/sdk.git
 cd sdk
 npm ci
 npm run type:check
 npm run build
 ```
 
-The default build preserves the `@nextshopkit/sdk` and `@nextshopkit/sdk/client`
-entry points. `npm run build:pro` builds the Pro entry points locally; run
-`npm run build` again to restore the SDK output. This migration does not change
-the SDK's public API or publish a new version of either package.
+The `src/` directory contains the source previously maintained in
+`NextShopKit/pro-development`, including both SDK and Pro entry points.
+Generated files go into `dist/`.
 
-Source lives in `src/`; generated output lives in `dist/`. npm packages include
-both source and compiled output. Installing from Git runs `prepare` to build
-the SDK. To publish, bump the package version and lockfile, merge the change,
-and manually run the **Publish SDK** workflow with that version. The workflow
-requires the repository's `NPM_TOKEN` secret.
+- `npm run build` builds the SDK and its client entry point.
+- `npm run build:pro` builds the Pro entry points locally. Run `npm run build`
+  again to restore the SDK output.
+- `npm run dev` rebuilds the SDK as you make changes.
 
-## 🚀 Why NextShopKit?
+If you publish your fork, use your own package name and npm credentials.
+The existing `@nextshopkit/sdk` npm release predates this source release;
+installing it does not install changes you make in your fork.
 
-Building a Shopify headless store from scratch is **hard**. You'll run into:
+## Existing usage examples
 
-- ❌ Complex GraphQL queries
-- ❌ Untyped responses
-- ❌ Confusing metafields
-- ❌ Repeating the same code over and over
-
-NextShopKit gives you:
-
-- ✅ **Prebuilt, typed functions** for common operations
-- ✅ **Metafield parsing**, filter handling, and cart utilities
-- ✅ **Ready for React** – use as hooks or server-side
-- ✅ **Full TypeScript support** with intelligent autocomplete
-- ✅ **Built-in caching** for optimal performance
+The examples below are retained as a reference for adapting the code. They may
+need changes for current dependencies and API versions.
 
 ## 📦 Installation
 
@@ -394,43 +388,26 @@ const client = createShopifyClient({
 | `getPolicies()`     | Fetch shop policies                      | Core |
 | Cart Functions      | Complete cart management                 | Core |
 
-## 🚀 PRO Tier Features
+## Pro source
 
-Upgrade to `@nextshopkit/pro` for advanced features:
-
-- 🎯 `getProductVariant()` - Fetch single variant with product context
-- 🎯 `getProductVariants()` - Bulk variant fetching
-- 🎯 `getPolicy()` - Fetch specific shop policy
-- 📝 Metaobjects support
-- 📰 Blog posts & articles
-- 🤖 Product recommendations
-- 🌍 Localization support
-- 🔍 Advanced search features
+The former Pro source is included in this repository for you to explore and
+adapt. Its entry point is `src/index.pro.ts`, with variant and policy helpers
+such as `getProductVariant()`, `getProductVariants()`, and `getPolicy()`.
 
 ## 📚 Documentation
+
+These are the original documentation links and may be outdated. Source-level
+reference notes are also available in [`src/docs`](src/docs).
 
 - **[Full Documentation](https://docs.nextshopkit.com)**
 - **[API Reference](https://docs.nextshopkit.com/api-reference)**
 - **[Examples & Guides](https://docs.nextshopkit.com/getting-started)**
 
-## 🆚 Why Not Hydrogen?
+## Continuing development
 
-Hydrogen is great, but it comes with constraints:
-
-- Built around Vite and custom tooling
-- Smaller community and ecosystem
-- Learning curve for teams familiar with Next.js
-
-NextShopKit lets you:
-
-- ✅ Stay in **Next.js** (most popular React framework)
-- ✅ Deploy anywhere (Vercel, AWS, Cloudflare)
-- ✅ Leverage massive ecosystem and talent pool
-- ✅ Use familiar patterns and tooling
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](https://github.com/NextShopKit/sdk/blob/main/CONTRIBUTING.md) for details.
+Forks and independent development are welcome. This repository is unmaintained,
+so issues and pull requests may not receive a response. Please maintain and
+share improvements through your own fork.
 
 ## 📄 License
 
