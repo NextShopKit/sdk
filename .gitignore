@@ -1,0 +1,43 @@
+# macOS system files
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+.out/
+.next/
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
+.env.*.local
+.env.local
+
+# Logs
+logs/
+*.log
+
+# VS Code settings (optional)
+.vscode/
+
+# IDEs
+.idea/
+*.swp
+
+# Test coverage
+coverage/
+
+# Local config
+*.local.*
+
+# Optional: Zip files and other delivery artifacts
+*.zip
